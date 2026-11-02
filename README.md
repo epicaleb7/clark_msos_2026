@@ -29,3 +29,6 @@ load "Step2/C2_Singularities/C2_ClassifySing.m";
 - `chapterIII/C1_Degeneracies/`: degeneracies, one file per case, over `QQ`, `QQ zeta8` = QQ(zeta_8) and `QQ zeta24` = QQ(zeta_24) = QQ(zeta_8, sqrt 3), with saved output
 - `chapterIII/lib/`: G-orbit reduction helpers
 - `chapterIV/`: group action and characters, plus one file for Jacobian-minor check for Lemma B.
+
+## FYI
+If you're seeing this note, then minimal effort has gone into cleaning the code for readability! Please stand by, as I hope to do that soon after submitting the thesis.
