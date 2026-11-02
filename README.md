@@ -24,9 +24,8 @@ load "Step2/C2_Singularities/C2_ClassifySing.m";
 
 ## Layout
 
-- `Step1/`: ideal of the lines
-- `Step2/C2_Singularities/`: Sing(X)
-- `Step2/C1_Degeneracies/`: degeneracies, one file per case, over `QQ`, `QQ zeta8` = QQ(zeta_8) and `QQ zeta24` = QQ(zeta_24) = QQ(zeta_8, sqrt 3), with saved output
-- `Step2/lib/`: G-orbit reduction helpers
-- `Week6/`: group action and characters
-- `Week8/LemmaB.m`: Jacobian-minor check for Lemma B
+- `chapterII/`: ideal of the lines (note that this was in chapterIII, so this is currently wrong!)
+- `chapterIII/C2_Singularities/`: Sing(X)
+- `chapterIII/C1_Degeneracies/`: degeneracies, one file per case, over `QQ`, `QQ zeta8` = QQ(zeta_8) and `QQ zeta24` = QQ(zeta_24) = QQ(zeta_8, sqrt 3), with saved output
+- `chapterIII/lib/`: G-orbit reduction helpers
+- `chapterIV/`: group action and characters, plus one file for Jacobian-minor check for Lemma B.
