@@ -1,0 +1,225 @@
+
+
+
+
+Loading "Step2/C1_Degeneracies/calebStyle/by_cases_caleb_style/C1_Matching.m"
+Loading "SetupX.m"
+true
+SetupX loaded.
+Loading "SetupX_QQal.m"
+IF THINGS ARE BROKEN, ITS BECAUSE I CHANGED ftal TO BE ft_al !!! SO EVERYTHING 
+IS UNDERSCORE EXCEPT S, QQ.
+true
+Loading "Step2/C1_Degeneracies/calebStyle/by_cases_caleb_style/ReduceByGInQQal.m"
+Reduce generic ideal by symmetries In QQ_al - loaded as ReduceByGInQQal (and 
+IsProjEmpty).
+--------------- Degenerate points where coordinates match 
+-------------------------
+Case a=b. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 2 ]
+[
+    Ideal of Polynomial ring of rank 9 over QQal
+    Order: Lexicographical
+    Variables: a_al, b_al, c_al, d_al, e_al, f_al, g_al, h_al, i_al
+    Homogeneous, Dimension 2, Radical, Prime
+    Groebner basis:
+    [
+        a_al - b_al,
+        b_al^2 - 2/3*g_al^2 - 1/3*i_al^2,
+        c_al^2 + 1/3*g_al^2 - 4/3*i_al^2,
+        d_al^2 + 2/3*g_al^2 - 5/3*i_al^2,
+        e_al^2 - 1/3*g_al^2 - 2/3*i_al^2,
+        f_al^2 - 4/3*g_al^2 + 1/3*i_al^2,
+        h_al + i_al
+    ]
+]
+Case a=c. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 8 ]
+[
+    Ideal of Polynomial ring of rank 9 over QQal
+    Order: Lexicographical
+    Variables: a_al, b_al, c_al, d_al, e_al, f_al, g_al, h_al, i_al
+    Homogeneous, Dimension 2, Radical, Prime
+    Groebner basis:
+    [
+        a_al - c_al,
+        b_al^2 + 1/3*h_al^2 - 4/3*i_al^2,
+        c_al^2 - 2/3*h_al^2 - 1/3*i_al^2,
+        d_al + f_al,
+        e_al + f_al,
+        f_al^2 - 1/3*h_al^2 - 2/3*i_al^2,
+        g_al + i_al
+    ]
+]
+Case a=e. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 32 ]
+[
+    Ideal of Polynomial ring of rank 9 over QQal
+    Order: Lexicographical
+    Variables: a_al, b_al, c_al, d_al, e_al, f_al, g_al, h_al, i_al
+    Homogeneous, Dimension 2, Radical, Prime
+    Groebner basis:
+    [
+        a_al + i_al,
+        b_al + g_al,
+        c_al + h_al,
+        d_al + h_al,
+        e_al + i_al,
+        f_al + g_al,
+        g_al^2 + h_al^2 - 2*i_al^2
+    ]
+]
+Case a=f. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 32 ]
+[
+    Ideal of Polynomial ring of rank 9 over QQal
+    Order: Lexicographical
+    Variables: a_al, b_al, c_al, d_al, e_al, f_al, g_al, h_al, i_al
+    Homogeneous, Dimension 2, Radical, Prime
+    Groebner basis:
+    [
+        a_al + h_al,
+        b_al + i_al,
+        c_al + g_al,
+        d_al + i_al,
+        e_al + g_al,
+        f_al + h_al,
+        g_al^2 - 1/2*h_al^2 - 1/2*i_al^2
+    ]
+]
+Case a=i. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 32 ]
+[
+    Ideal of Polynomial ring of rank 9 over QQal
+    Order: Lexicographical
+    Variables: a_al, b_al, c_al, d_al, e_al, f_al, g_al, h_al, i_al
+    Homogeneous, Dimension 2, Radical, Prime
+    Groebner basis:
+    [
+        a_al - i_al,
+        b_al + g_al,
+        c_al + h_al,
+        d_al + h_al,
+        e_al + i_al,
+        f_al + g_al,
+        g_al^2 + h_al^2 - 2*i_al^2
+    ]
+]
+Case b=d. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 32 ]
+[
+    Ideal of Polynomial ring of rank 9 over QQal
+    Order: Lexicographical
+    Variables: a_al, b_al, c_al, d_al, e_al, f_al, g_al, h_al, i_al
+    Homogeneous, Dimension 2, Radical, Prime
+    Groebner basis:
+    [
+        a_al + h_al,
+        b_al + i_al,
+        c_al + g_al,
+        d_al + i_al,
+        e_al + g_al,
+        f_al + h_al,
+        g_al^2 - 1/2*h_al^2 - 1/2*i_al^2
+    ]
+]
+Case b=e. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 8 ]
+[
+    Ideal of Polynomial ring of rank 9 over QQal
+    Order: Lexicographical
+    Variables: a_al, b_al, c_al, d_al, e_al, f_al, g_al, h_al, i_al
+    Homogeneous, Dimension 2, Radical, Prime
+    Groebner basis:
+    [
+        a_al + g_al,
+        b_al + h_al,
+        c_al + i_al,
+        d_al^2 + h_al^2 - 2*i_al^2,
+        e_al + h_al,
+        f_al^2 - 3*h_al^2 + 2*i_al^2,
+        g_al^2 - 2*h_al^2 + i_al^2
+    ]
+]
+Case b=h. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 8 ]
+[
+    Ideal of Polynomial ring of rank 9 over QQal
+    Order: Lexicographical
+    Variables: a_al, b_al, c_al, d_al, e_al, f_al, g_al, h_al, i_al
+    Homogeneous, Dimension 2, Radical, Prime
+    Groebner basis:
+    [
+        a_al + g_al,
+        b_al - h_al,
+        c_al + i_al,
+        d_al^2 + h_al^2 - 2*i_al^2,
+        e_al + h_al,
+        f_al^2 - 3*h_al^2 + 2*i_al^2,
+        g_al^2 - 2*h_al^2 + i_al^2
+    ]
+]
+--------------- Are the 8 matching cases really 8 different orbits? 
+-------------------------
+Number of different orbits among the 8 cases:
+3
+Orbit count (how many of the 8 cases land in each orbit):
+[ 1, 3, 4 ]
+
+Orbit number
+1
+contains the cases:
+a=b
+
+Orbit number
+2
+contains the cases:
+a=c
+b=e
+b=h
+
+Orbit number
+3
+contains the cases:
+a=e
+a=f
+a=i
+b=d
+--------------- Number of curves in each orbit, and degree 
+-------------------------
+Orbit number
+1
+curves in the orbit:
+16
+degree:
+32
+
+Orbit number
+2
+curves in the orbit:
+32
+degree:
+8
+
+Orbit number
+3
+curves in the orbit:
+128
+degree:
+2

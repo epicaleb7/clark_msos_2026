@@ -1,0 +1,215 @@
+
+
+
+
+Loading "Step2/C1_Degeneracies/calebStyle/by_cases_caleb_style_QQ_only/C1_Matching.m"
+Loading "SetupX.m"
+true
+SetupX loaded.
+Loading "Step2/C1_Degeneracies/calebStyle/by_cases_caleb_style_QQ_only/ReduceByG.m"
+Reduce generic ideal by symmetries - loaded as ReduceByG (and IsProjEmpty).
+--------------- Degenerate points where coordinates match 
+-------------------------
+Case a=b. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 2 ]
+[
+    Ideal of Polynomial ring of rank 9 over Rational Field
+    Order: Lexicographical
+    Variables: a, b, c, d, e, f, g, h, i
+    Homogeneous, Dimension 2, Radical, Prime
+    Groebner basis:
+    [
+        a - b,
+        b^2 - 2/3*g^2 - 1/3*i^2,
+        c^2 + 1/3*g^2 - 4/3*i^2,
+        d^2 + 2/3*g^2 - 5/3*i^2,
+        e^2 - 1/3*g^2 - 2/3*i^2,
+        f^2 - 4/3*g^2 + 1/3*i^2,
+        h + i
+    ]
+]
+Case a=c. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 8 ]
+[
+    Ideal of Polynomial ring of rank 9 over Rational Field
+    Order: Lexicographical
+    Variables: a, b, c, d, e, f, g, h, i
+    Homogeneous, Dimension 2, Radical, Prime
+    Groebner basis:
+    [
+        a - c,
+        b^2 + 1/3*h^2 - 4/3*i^2,
+        c^2 - 2/3*h^2 - 1/3*i^2,
+        d + f,
+        e + f,
+        f^2 - 1/3*h^2 - 2/3*i^2,
+        g + i
+    ]
+]
+Case a=e. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 32 ]
+[
+    Ideal of Polynomial ring of rank 9 over Rational Field
+    Order: Lexicographical
+    Variables: a, b, c, d, e, f, g, h, i
+    Homogeneous, Dimension 2, Radical, Prime
+    Groebner basis:
+    [
+        a + i,
+        b + g,
+        c + h,
+        d + h,
+        e + i,
+        f + g,
+        g^2 + h^2 - 2*i^2
+    ]
+]
+Case a=f. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 32 ]
+[
+    Ideal of Polynomial ring of rank 9 over Rational Field
+    Order: Lexicographical
+    Variables: a, b, c, d, e, f, g, h, i
+    Homogeneous, Dimension 2, Radical, Prime
+    Groebner basis:
+    [
+        a + h,
+        b + i,
+        c + g,
+        d + i,
+        e + g,
+        f + h,
+        g^2 - 1/2*h^2 - 1/2*i^2
+    ]
+]
+Case a=i. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 32 ]
+[
+    Ideal of Polynomial ring of rank 9 over Rational Field
+    Order: Lexicographical
+    Variables: a, b, c, d, e, f, g, h, i
+    Homogeneous, Dimension 2, Radical, Prime
+    Groebner basis:
+    [
+        a - i,
+        b + g,
+        c + h,
+        d + h,
+        e + i,
+        f + g,
+        g^2 + h^2 - 2*i^2
+    ]
+]
+Case b=d. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 32 ]
+[
+    Ideal of Polynomial ring of rank 9 over Rational Field
+    Order: Lexicographical
+    Variables: a, b, c, d, e, f, g, h, i
+    Homogeneous, Dimension 2, Radical, Prime
+    Groebner basis:
+    [
+        a + h,
+        b + i,
+        c + g,
+        d + i,
+        e + g,
+        f + h,
+        g^2 - 1/2*h^2 - 1/2*i^2
+    ]
+]
+Case b=e. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 8 ]
+[
+    Ideal of Polynomial ring of rank 9 over Rational Field
+    Order: Lexicographical
+    Variables: a, b, c, d, e, f, g, h, i
+    Homogeneous, Dimension 2, Radical, Prime
+    Groebner basis:
+    [
+        a + g,
+        b + h,
+        c + i,
+        d^2 + h^2 - 2*i^2,
+        e + h,
+        f^2 - 3*h^2 + 2*i^2,
+        g^2 - 2*h^2 + i^2
+    ]
+]
+Case b=h. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 8 ]
+[
+    Ideal of Polynomial ring of rank 9 over Rational Field
+    Order: Lexicographical
+    Variables: a, b, c, d, e, f, g, h, i
+    Homogeneous, Dimension 2, Radical, Prime
+    Groebner basis:
+    [
+        a + g,
+        b - h,
+        c + i,
+        d^2 + h^2 - 2*i^2,
+        e + h,
+        f^2 - 3*h^2 + 2*i^2,
+        g^2 - 2*h^2 + i^2
+    ]
+]
+--------------- Are the 8 matching cases really 8 different orbits? 
+-------------------------
+Number of different orbits among the 8 cases:
+3
+Orbit count (how many of the 8 cases land in each orbit):
+[ 1, 3, 4 ]
+Orbit number
+1
+contains the cases:
+a=b
+Orbit number
+2
+contains the cases:
+a=c
+b=e
+b=h
+Orbit number
+3
+contains the cases:
+a=e
+a=f
+a=i
+b=d
+--------------- Number of curves in each orbit, and degree 
+-------------------------
+Orbit number
+1
+curves in the orbit:
+16
+degree:
+32
+Orbit number
+2
+curves in the orbit:
+32
+degree:
+8
+Orbit number
+3
+curves in the orbit:
+128
+degree:
+2

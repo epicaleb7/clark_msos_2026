@@ -1,0 +1,164 @@
+
+
+
+
+Loading "Step2/C1_Degeneracies/calebStyle/by_cases_caleb_style_QQ_only/C1_ThreeZeros.m"
+Loading "SetupX.m"
+true
+SetupX loaded.
+Loading "Step2/C1_Degeneracies/calebStyle/by_cases_caleb_style_QQ_only/ReduceByG.m"
+Reduce generic ideal by symmetries - loaded as ReduceByG (and IsProjEmpty).
+---------------- Degenerate points with three zero coordinates 
+-------------------------
+Empty cases (should all be true):
+Case {c,d,i}:
+true
+Case {a,b,c}:
+true
+Case {a,c,f}:
+true
+Case {c,g,h}:
+true
+Case {b,d,e}:
+true
+Case {d,e,g}:
+true
+Case {b,e,i}:
+true
+Case {c,d,f}:
+true
+Case {b,f,i}:
+true
+Case {a,e,g}:
+true
+Case {b,c,f}:
+true
+Case {a,c,g}:
+true
+Case {b,d,h}:
+true
+Case {b,d,i}. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 16 ]
+[
+    Ideal of Polynomial ring of rank 9 over Rational Field
+    Order: Lexicographical
+    Variables: a, b, c, d, e, f, g, h, i
+    Homogeneous, Dimension 1, Radical, Prime
+    Groebner basis:
+    [
+        a + h,
+        b,
+        c + g,
+        d,
+        e + g,
+        f + h,
+        g^2 - 1/2*h^2,
+        i
+    ]
+]
+Case {b,e,h}. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 8 ]
+[
+    Ideal of Polynomial ring of rank 9 over Rational Field
+    Order: Lexicographical
+    Variables: a, b, c, d, e, f, g, h, i
+    Homogeneous, Dimension 1, Radical, Prime
+    Groebner basis:
+    [
+        a + g,
+        b,
+        c + i,
+        d^2 - 2*i^2,
+        d*f + 2*g*i,
+        d*g + f*i,
+        d*i - f*g,
+        e,
+        f^2 + 2*i^2,
+        g^2 + i^2,
+        h
+    ]
+]
+Case {a,e,i}. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 16 ]
+[
+    Ideal of Polynomial ring of rank 9 over Rational Field
+    Order: Lexicographical
+    Variables: a, b, c, d, e, f, g, h, i
+    Homogeneous, Dimension 1, Radical, Prime
+    Groebner basis:
+    [
+        a,
+        b + g,
+        c + h,
+        d + h,
+        e,
+        f + g,
+        g^2 + h^2,
+        i
+    ]
+]
+---------------- Singular points of X, and comparison -------------------------
+Number of components of Sing(X) over QQ (Galois orbits of points):
+112
+Orbit count then ideals mod symmetry for Sing(X):
+[ 16, 32, 64 ]
+[
+    Ideal of Polynomial ring of rank 9 over Rational Field
+    Order: Lexicographical
+    Variables: a, b, c, d, e, f, g, h, i
+    Homogeneous, Dimension 1, Radical, Prime
+    Groebner basis:
+    [
+        a + c,
+        b^2 - 2*i^2,
+        b*c + h*i,
+        b*h + 2*c*i,
+        b*i - c*h,
+        c^2 + i^2,
+        d,
+        e,
+        f,
+        g + i,
+        h^2 + 2*i^2
+    ],
+    Ideal of Polynomial ring of rank 9 over Rational Field
+    Order: Lexicographical
+    Variables: a, b, c, d, e, f, g, h, i
+    Homogeneous, Dimension 1, Radical, Prime
+    Groebner basis:
+    [
+        a + h,
+        b + i,
+        c,
+        d + i,
+        e,
+        f + h,
+        g,
+        h^2 + i^2
+    ],
+    Ideal of Polynomial ring of rank 9 over Rational Field
+    Order: Lexicographical
+    Variables: a, b, c, d, e, f, g, h, i
+    Homogeneous, Dimension 1, Radical, Prime
+    Groebner basis:
+    [
+        a + h,
+        b,
+        c + g,
+        d,
+        e + g,
+        f + h,
+        g^2 - 1/2*h^2,
+        i
+    ]
+]
+Is each 3-zero point singular? ({b,d,i}, {b,e,h}, {a,e,i}):
+true
+true
+true

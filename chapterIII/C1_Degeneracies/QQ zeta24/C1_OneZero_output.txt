@@ -1,0 +1,85 @@
+
+
+
+
+Loading "Step2/C1_Degeneracies/calebStyle/by_cases_caleb_style_QQalal/C1_OneZer\
+o.m"
+Loading "SetupX.m"
+true
+SetupX loaded.
+Loading "SetupX_QQal.m"
+IF THINGS ARE BROKEN, ITS BECAUSE I CHANGED ftal TO BE ft_al !!! SO EVERYTHING 
+IS UNDERSCORE EXCEPT S, QQ.
+true
+Loading "Step2/C1_Degeneracies/calebStyle/by_cases_caleb_style_QQalal/SetupX_QQ\
+alal.m"
+SetupX_QQalal loaded (QQalal<rt3>, Salal, defIdealalal).
+Loading "Step2/C1_Degeneracies/calebStyle/by_cases_caleb_style_QQalal/ReduceByG\
+InQQalal.m"
+Reduce generic ideal by symmetries In QQ_alal - loaded as ReduceByGInQQalal (and
+IsProjEmpty).
+---------------- Degenerate points along coordinate hyperplanes 
+-------------------------
+Case a=0. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 4 ]
+[
+    Ideal of Polynomial ring of rank 9 over QQalal
+    Order: Lexicographical
+    Variables: a_alal, b_alal, c_alal, d_alal, e_alal, f_alal, g_alal, h_alal, 
+    i_alal
+    Homogeneous, Dimension 2, Radical, Prime
+    Groebner basis:
+    [
+        a_alal,
+        b_alal^2 + h_alal^2 - i_alal^2,
+        c_alal^2 - h_alal^2 - 1/2*i_alal^2,
+        d_alal^2 - h_alal^2 - i_alal^2,
+        e_alal + 1/2*(zeta_8^3 - zeta_8)*i_alal,
+        f_alal + zeta_8^2*h_alal,
+        g_alal^2 + h_alal^2 - 1/2*i_alal^2
+    ]
+]
+Case b=0. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 8 ]
+[
+    Ideal of Polynomial ring of rank 9 over QQalal
+    Order: Lexicographical
+    Variables: a_alal, b_alal, c_alal, d_alal, e_alal, f_alal, g_alal, h_alal, 
+    i_alal
+    Homogeneous, Dimension 2, Radical, Prime
+    Groebner basis:
+    [
+        a_alal^2 - h_alal^2 + i_alal^2,
+        b_alal,
+        c_alal^2 - 1/2*h_alal^2 - i_alal^2,
+        d_alal + (zeta_8^3 - zeta_8)*i_alal,
+        e_alal + 1/2*(zeta_8^3 - zeta_8)*h_alal,
+        f_alal + (zeta_8^3 - zeta_8)*g_alal,
+        g_alal^2 - 1/2*h_alal^2 + i_alal^2
+    ]
+]
+Case e=0. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 16 ]
+[
+    Ideal of Polynomial ring of rank 9 over QQalal
+    Order: Lexicographical
+    Variables: a_alal, b_alal, c_alal, d_alal, e_alal, f_alal, g_alal, h_alal, 
+    i_alal
+    Homogeneous, Dimension 2, Radical, Prime
+    Groebner basis:
+    [
+        a_alal + zeta_8^2*i_alal,
+        b_alal + zeta_8^2*h_alal,
+        c_alal + zeta_8^2*g_alal,
+        d_alal + zeta_8^2*f_alal,
+        e_alal,
+        f_alal^2 + h_alal^2 + 2*i_alal^2,
+        g_alal^2 + h_alal^2 + i_alal^2
+    ]
+]

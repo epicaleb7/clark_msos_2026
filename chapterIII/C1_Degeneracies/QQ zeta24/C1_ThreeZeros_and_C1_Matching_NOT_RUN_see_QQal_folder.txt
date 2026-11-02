@@ -1,0 +1,44 @@
+C1_ThreeZeros.m and C1_Matching.m were NOT run over QQalal = QQal(rt3).  (30 Oct 2026)
+=====================================================================================
+
+For their output, see the QQal folder:
+    ../by_cases_caleb_style/C1_ThreeZeros_output.txt
+    ../by_cases_caleb_style/C1_Matching_output.txt
+The results over QQalal are the same: same components, same OC vectors, same orbits.
+
+Why they weren't run
+--------------------
+Groebner bases over the relative field ext<QQal | xx^2 - 3> are very slow in Magma
+(about 14 minutes for one two-zero case), and nothing new can come out of these two files.
+
+Why nothing changes (how this was verified)
+-------------------------------------------
+If no component splits further when sqrt3 is added, then the primes over QQalal are exactly
+the QQal primes, the group A acts on them in the same way, and so ReduceByGInQQalal would give
+exactly the same OC vectors and representatives as ReduceByGInQQal.
+
+To check that nothing splits, CheckNothingSplitsOverQQalal.m counts the components over
+QQ(zeta8, sqrt3), built as CyclotomicField(24) (the same field as QQal(rt3), but fast in Magma),
+without the slow orbit reduction. Output: CheckNothingSplitsOverQQalal_output.txt.
+
+    case        components over QQal    components over QQ(zeta8, sqrt3)
+    a=b                 2                        2
+    a=c                 8                        8
+    a=e                32                       32
+    a=f                32                       32
+    a=i                32                       32
+    b=d                32                       32
+    b=e                 8                        8
+    b=h                 8                        8
+    {b,d,i}            32                       32
+    {b,e,h}            32                       32
+    {a,e,i}            32                       32
+    Sing(X)           256                      256
+
+All the same, so nothing splits, and the QQal outputs are also the QQalal outputs.
+(The 13 empty triples and the 23 empty four-zero cases are empty over every field:
+emptiness is decided by the radical, which doesn't depend on the field.)
+
+Note: the 27 Sep "All absolutely irreducible" check is NOT used as evidence here: the old
+CheckAllAbsIrred had a bug (it broke out of the loop before recording a failure), so it could
+print "All absolutely irreducible" even when that was false.

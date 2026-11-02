@@ -1,0 +1,59 @@
+
+
+
+
+Loading "Step2/C1_Degeneracies/calebStyle/by_cases_caleb_style_QQ_only/C1_FourZeros.m"
+Loading "SetupX.m"
+true
+SetupX loaded.
+Loading "Step2/C1_Degeneracies/calebStyle/by_cases_caleb_style_QQ_only/ReduceByG.m"
+Reduce generic ideal by symmetries - loaded as ReduceByG (and IsProjEmpty).
+---------------- Degenerate points with four zero coordinates 
+-------------------------
+Case {d,e,f,i}:
+true
+Case {d,e,g,i}:
+true
+Case {a,b,c,f}:
+true
+Case {e,f,h,i}:
+true
+Case {c,e,g,h}:
+true
+Case {b,d,e,h}:
+true
+Case {d,f,g,h}:
+true
+Case {b,e,g,i}:
+true
+Case {b,c,d,e}:
+true
+Case {b,d,g,i}:
+true
+Case {a,b,h,i}:
+true
+Case {a,d,f,h}:
+true
+Case {a,c,g,h}:
+true
+Case {a,d,f,g}:
+true
+Case {a,b,c,i}:
+true
+Case {b,d,e,i}:
+true
+Case {c,e,g,i}:
+true
+Case {a,b,g,h}:
+true
+Case {a,c,g,i}:
+true
+Case {b,c,d,g}:
+true
+Case {b,d,f,h}:
+true
+Case {c,e,f,i}:
+true
+Case {b,c,f,g}:
+true
+So X has no points with four (or more) zero coordinates.

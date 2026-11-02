@@ -1,0 +1,121 @@
+// NOT a Magma run. This is by_case/repeated_output.txt (30 Oct) rewritten by hand in the style of
+// C1_Matching_output.txt: variables a..i instead of x1..x9, same case names, same orbit numbering.
+// Every number below is copied from repeated_output.txt; nothing was recomputed.
+//
+//      a b c        x1 x2 x3
+//      d e f   =    x4 x5 x6
+//      g h i        x7 x8 x9
+
+--------------- Degenerate points where coordinates match -------------------------
+(same 8 cases as C1_Matching.m, now with degree and genus of the curves)
+
+Case     where            curves   degree   genus   OC
+a=b      corner+adj edge     2       32       49    [ 2 ]
+a=c      two corners         8        8        5    [ 8 ]
+a=e      corner+centre      32        2        0    [ 32 ]
+a=f      corner+far edge    32        2        0    [ 32 ]
+a=i      opp corners        32        2        0    [ 32 ]
+b=d      two adj edges      32        2        0    [ 32 ]
+b=e      edge+centre         8        8        5    [ 8 ]
+b=h      opp edges           8        8        5    [ 8 ]
+
+--------------- Are the 8 matching cases really 8 different orbits? -------------------------
+Number of different orbits among the 8 cases:
+3
+
+Orbit 1: degree 32, genus 49.  cases: a=b
+         stabiliser 256 of 4096  =>  16 curves
+    a - b,
+    b^2 - 2/3*g^2 - 1/3*i^2,
+    c^2 + 1/3*g^2 - 4/3*i^2,
+    d^2 + 2/3*g^2 - 5/3*i^2,
+    e^2 - 1/3*g^2 - 2/3*i^2,
+    f^2 - 4/3*g^2 + 1/3*i^2,
+    h + i
+
+Orbit 2: degree 8, genus 5.  cases: a=c, b=e, b=h
+         stabiliser 128 of 4096  =>  32 curves
+    a - c,
+    b^2 + 1/3*h^2 - 4/3*i^2,
+    c^2 - 2/3*h^2 - 1/3*i^2,
+    d + f,
+    e + f,
+    f^2 - 1/3*h^2 - 2/3*i^2,
+    g + i
+
+Orbit 3: degree 2, genus 0 (a conic).  cases: a=e, a=f, a=i, b=d
+         stabiliser 32 of 4096  =>  128 curves
+    a + i,
+    b + g,
+    c + h,
+    d + h,
+    e + i,
+    f + g,
+    g^2 + h^2 - 2*i^2
+// 6 linear equations in P^8 leave the plane with coordinates (g:h:i). Inside it: one conic.
+
+--------------- Orbit 3 (genus 0): infinitely many rational points -------------------------
+Case a=e (and a=i): conic g^2 + h^2 - 2*i^2 = 0, rational point (7:1:5)
+    parametrisation (g:h:i) = (s^2 + 2st - t^2 : s^2 - 2st - t^2 : s^2 + t^2)
+Case a=f (and b=d): conic g^2 - 1/2*h^2 - 1/2*i^2 = 0
+    parametrisation (g:h:i) = (s^2 + 4st + 5t^2 : s^2 + 2st - t^2 : s^2 + 6st + 7t^2)
+
+Example, a=e with (g:h:i) = (7:1:5):
+    -5  -7  -1             25 49  1
+    -1  -5  -7   squared:   1 25 49     magic sum 75
+     7   1   5             49  1 25
+
+--------------- Orbits 1 and 2 (genus >= 2): only trivial points -------------------------
+// Each curve is  y_k^2 = q_k(s,t),  k = 1..n,  over the line P^1 with coordinates (s:t).
+// Genus = 1 + 2^(n-1)*(n-2):  n = 3 gives 5,  n = 5 gives 49.
+// Any TWO of the equations give a genus-1 curve E, and the curve maps onto E.
+// If E has rank 0, E has finitely many rational points (only torsion), which allows only a few (s:t).
+
+Case a=b (orbit 1): n = 5 quadrics in (s:t) = (g:i)
+    pair    rank   #torsion
+    (b,c)    0       8
+    (b,d)    1       4
+    (b,e)    0       8
+    (b,f)    1       4
+    (c,d)    1       4
+    (c,e)    1       4
+    (c,f)    0       8
+    (d,e)    0       8
+    (d,f)    1       4
+    (e,f)    0       8
+    (s:t) allowed by the rank-0 pairs: (1:1), (-1:1)
+    rational points: 64, all entries +-1
+        (i = 1, h = -1, a = b, and a,c,d,e,f,g any signs: 2^6 = 64)
+
+Case a=c (orbit 2): n = 3 quadrics in (s:t) = (h:i)
+    pair    rank   #torsion
+    (b,c)    0       8
+    (b,f)    1       4
+    (c,f)    0       8
+    (s:t) allowed: (1:1), (-1:1)
+    rational points: 16, all entries +-1
+        (i = 1, g = -1, a = c, e = d, f = -d, and a,b,d,h any signs: 2^4 = 16)
+
+Case b=e (orbit 2): n = 3 quadrics in (s:t) = (h:i)
+    pair    rank   #torsion
+    (d,f)    1       4
+    (d,g)    0       8
+    (f,g)    0       8
+    (s:t) allowed: (1:1), (-1:1)
+    rational points: 16, all entries +-1
+
+Case b=h (orbit 2): n = 3 quadrics in (s:t) = (h:i)
+    pair    rank   #torsion
+    (d,f)    1       4
+    (d,g)    0       8
+    (f,g)    0       8
+    (s:t) allowed: (1:1), (-1:1)
+    rational points: 16, all entries +-1
+
+(b=e and b=h are in the same orbit as a=c, so they are only a consistency check.)
+(Rank 0 is "proved true" by Magma in every case above.)
+
+SUMMARY
+    orbit 1: 16 curves, genus 49  ->  only squares with entries +-1
+    orbit 2: 32 curves, genus 5   ->  only squares with entries +-1
+    orbit 3: 128 conics, genus 0  ->  infinitely many, e.g. the 25 49 1 square above

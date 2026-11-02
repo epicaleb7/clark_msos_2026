@@ -1,0 +1,185 @@
+
+
+
+
+Loading "Step2/C1_Degeneracies/calebStyle/by_cases_caleb_style/C1_TwoZeros.m"
+Loading "SetupX.m"
+true
+SetupX loaded.
+Loading "SetupX_QQal.m"
+IF THINGS ARE BROKEN, ITS BECAUSE I CHANGED ftal TO BE ft_al !!! SO EVERYTHING 
+IS UNDERSCORE EXCEPT S, QQ.
+true
+Loading "Step2/C1_Degeneracies/calebStyle/by_cases_caleb_style/ReduceByGInQQal.m"
+Reduce generic ideal by symmetries In QQ_al - loaded as ReduceByGInQQal (and 
+IsProjEmpty).
+---------------- Degenerate points with two zero coordinates 
+-------------------------
+Case {a,d}. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 32 ]
+[
+    Ideal of Polynomial ring of rank 9 over QQal
+    Order: Lexicographical
+    Variables: a_al, b_al, c_al, d_al, e_al, f_al, g_al, h_al, i_al
+    Homogeneous, Dimension 1, Radical, Prime
+    Groebner basis:
+    [
+        a_al,
+        b_al + (zeta_8^3 - zeta_8)*i_al,
+        c_al + 1/2*(zeta_8^3 + zeta_8)*i_al,
+        d_al,
+        e_al + 1/2*(zeta_8^3 - zeta_8)*i_al,
+        f_al + i_al,
+        g_al^2 - 3/2*i_al^2,
+        h_al + zeta_8^2*i_al
+    ]
+]
+Case {a,c}. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 32 ]
+[
+    Ideal of Polynomial ring of rank 9 over QQal
+    Order: Lexicographical
+    Variables: a_al, b_al, c_al, d_al, e_al, f_al, g_al, h_al, i_al
+    Homogeneous, Dimension 1, Radical, Prime
+    Groebner basis:
+    [
+        a_al,
+        b_al^2 - 3/2*i_al^2,
+        c_al,
+        d_al + 1/2*(zeta_8^3 - zeta_8)*i_al,
+        e_al + 1/2*(zeta_8^3 - zeta_8)*i_al,
+        f_al + 1/2*(zeta_8^3 - zeta_8)*i_al,
+        g_al + i_al,
+        h_al + 1/2*(zeta_8^3 + zeta_8)*i_al
+    ]
+]
+Case {c,d}. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 32 ]
+[
+    Ideal of Polynomial ring of rank 9 over QQal
+    Order: Lexicographical
+    Variables: a_al, b_al, c_al, d_al, e_al, f_al, g_al, h_al, i_al
+    Homogeneous, Dimension 1, Radical, Prime
+    Groebner basis:
+    [
+        a_al + i_al,
+        b_al + (zeta_8^3 - zeta_8)*i_al,
+        c_al,
+        d_al,
+        e_al + i_al,
+        f_al + (zeta_8^3 - zeta_8)*i_al,
+        g_al + (zeta_8^3 - zeta_8)*i_al,
+        h_al
+    ]
+]
+Case {d,f}. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 32 ]
+[
+    Ideal of Polynomial ring of rank 9 over QQal
+    Order: Lexicographical
+    Variables: a_al, b_al, c_al, d_al, e_al, f_al, g_al, h_al, i_al
+    Homogeneous, Dimension 1, Radical, Prime
+    Groebner basis:
+    [
+        a_al + zeta_8^2*i_al,
+        b_al + (zeta_8^3 - zeta_8)*i_al,
+        c_al + zeta_8^2*i_al,
+        d_al,
+        e_al,
+        f_al,
+        g_al + i_al,
+        h_al + (zeta_8^3 + zeta_8)*i_al
+    ]
+]
+Case {d,e}. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 32 ]
+[
+    Ideal of Polynomial ring of rank 9 over QQal
+    Order: Lexicographical
+    Variables: a_al, b_al, c_al, d_al, e_al, f_al, g_al, h_al, i_al
+    Homogeneous, Dimension 1, Radical, Prime
+    Groebner basis:
+    [
+        a_al + zeta_8^2*i_al,
+        b_al + (zeta_8^3 - zeta_8)*i_al,
+        c_al + zeta_8^2*i_al,
+        d_al,
+        e_al,
+        f_al,
+        g_al + i_al,
+        h_al + (zeta_8^3 + zeta_8)*i_al
+    ]
+]
+Case {c,e}. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 32 ]
+[
+    Ideal of Polynomial ring of rank 9 over QQal
+    Order: Lexicographical
+    Variables: a_al, b_al, c_al, d_al, e_al, f_al, g_al, h_al, i_al
+    Homogeneous, Dimension 1, Radical, Prime
+    Groebner basis:
+    [
+        a_al + zeta_8^2*i_al,
+        b_al + i_al,
+        c_al,
+        d_al + i_al,
+        e_al,
+        f_al + zeta_8^2*i_al,
+        g_al,
+        h_al + zeta_8^2*i_al
+    ]
+]
+Case {f,h}. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 32 ]
+[
+    Ideal of Polynomial ring of rank 9 over QQal
+    Order: Lexicographical
+    Variables: a_al, b_al, c_al, d_al, e_al, f_al, g_al, h_al, i_al
+    Homogeneous, Dimension 1, Radical, Prime
+    Groebner basis:
+    [
+        a_al,
+        b_al + i_al,
+        c_al + 1/2*(zeta_8^3 - zeta_8)*i_al,
+        d_al + i_al,
+        e_al + 1/2*(zeta_8^3 - zeta_8)*i_al,
+        f_al,
+        g_al + 1/2*(zeta_8^3 - zeta_8)*i_al,
+        h_al
+    ]
+]
+Case {a,i}. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 32 ]
+[
+    Ideal of Polynomial ring of rank 9 over QQal
+    Order: Lexicographical
+    Variables: a_al, b_al, c_al, d_al, e_al, f_al, g_al, h_al, i_al
+    Homogeneous, Dimension 1, Radical, Prime
+    Groebner basis:
+    [
+        a_al,
+        b_al + zeta_8^2*h_al,
+        c_al + h_al,
+        d_al + h_al,
+        e_al,
+        f_al + zeta_8^2*h_al,
+        g_al + zeta_8^2*h_al,
+        i_al
+    ]
+]

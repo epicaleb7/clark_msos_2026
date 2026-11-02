@@ -1,0 +1,31 @@
+
+
+
+
+Loading "SetupX.m"
+true
+SetupX loaded.
+Matching cases, number of components over QQ(zeta8, sqrt3):
+a=b: 2
+Time: 10.770
+a=c: 8
+Time: 4.010
+a=e: 32
+Time: 9.670
+a=f: 32
+Time: 9.090
+a=i: 32
+Time: 9.330
+b=d: 32
+Time: 9.880
+b=e: 8
+Time: 3.100
+b=h: 8
+Time: 3.120
+Three-zero cases:
+{b,d,i}: 32
+{b,e,h}: 32
+{a,e,i}: 32
+Sing(X):
+256 components
+Time: 61.390

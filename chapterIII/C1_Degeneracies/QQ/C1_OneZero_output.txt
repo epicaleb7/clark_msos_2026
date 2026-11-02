@@ -1,0 +1,96 @@
+
+
+
+
+Loading "Step2/C1_Degeneracies/calebStyle/by_cases_caleb_style_QQ_only/C1_OneZero.m"
+Loading "SetupX.m"
+true
+SetupX loaded.
+Loading "Step2/C1_Degeneracies/calebStyle/by_cases_caleb_style_QQ_only/ReduceByG.m"
+Reduce generic ideal by symmetries - loaded as ReduceByG (and IsProjEmpty).
+---------------- Degenerate points along coordinate hyperplanes 
+-------------------------
+Case a=0. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 1 ]
+[
+    Ideal of Polynomial ring of rank 9 over Rational Field
+    Order: Lexicographical
+    Variables: a, b, c, d, e, f, g, h, i
+    Homogeneous, Dimension 2, Radical, Prime
+    Groebner basis:
+    [
+        a,
+        b^2 + h^2 - i^2,
+        c^2 - h^2 - 1/2*i^2,
+        d^2 - h^2 - i^2,
+        e^2 - 1/2*i^2,
+        f^2 + h^2,
+        g^2 + h^2 - 1/2*i^2
+    ]
+]
+Case b=0. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 4 ]
+[
+    Ideal of Polynomial ring of rank 9 over Rational Field
+    Order: Lexicographical
+    Variables: a, b, c, d, e, f, g, h, i
+    Homogeneous, Dimension 2, Radical, Prime
+    Groebner basis:
+    [
+        a^2 - h^2 + i^2,
+        b,
+        c^2 - 1/2*h^2 - i^2,
+        d^2 - 2*i^2,
+        d*e + h*i,
+        d*f + 2*g*i,
+        d*g + f*i,
+        d*h + 2*e*i,
+        d*i + e*h - f*g,
+        e^2 - 1/2*h^2,
+        e*f - g*h,
+        e*g - 1/2*f*h,
+        e*h^2 - 2*e*i^2 - f*g*h,
+        f^2 - h^2 + 2*i^2,
+        g^2 - 1/2*h^2 + i^2
+    ]
+]
+Case e=0. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 8 ]
+[
+    Ideal of Polynomial ring of rank 9 over Rational Field
+    Order: Lexicographical
+    Variables: a, b, c, d, e, f, g, h, i
+    Homogeneous, Dimension 2, Radical, Prime
+    Groebner basis:
+    [
+        a^2 + i^2,
+        a*b + h*i,
+        a*c + g*i,
+        a*d + f*i,
+        a*f - d*i,
+        a*g - c*i,
+        a*h - b*i,
+        a*i - c*g + d*f,
+        b^2 + h^2,
+        b*c + g*h,
+        b*d + f*h,
+        b*f - d*h,
+        b*g - c*h,
+        b*h + 2*c*g - d*f,
+        b*i^2 - c*g*h + d*f*h,
+        c^2 - h^2 - i^2,
+        c*d + f*g,
+        c*f - d*g,
+        c*h^2 + 2*c*i^2 + d*f*g,
+        d^2 - h^2 - 2*i^2,
+        e,
+        f^2 + h^2 + 2*i^2,
+        g^2 + h^2 + i^2
+    ]
+]

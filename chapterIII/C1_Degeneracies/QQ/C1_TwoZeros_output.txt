@@ -1,0 +1,189 @@
+
+
+
+
+Loading "Step2/C1_Degeneracies/calebStyle/by_cases_caleb_style_QQ_only/C1_TwoZeros.m"
+Loading "SetupX.m"
+true
+SetupX loaded.
+Loading "Step2/C1_Degeneracies/calebStyle/by_cases_caleb_style_QQ_only/ReduceByG.m"
+Reduce generic ideal by symmetries - loaded as ReduceByG (and IsProjEmpty).
+---------------- Degenerate points with two zero coordinates 
+-------------------------
+Case {a,d}. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 8 ]
+[
+    Ideal of Polynomial ring of rank 9 over Rational Field
+    Order: Lexicographical
+    Variables: a, b, c, d, e, f, g, h, i
+    Homogeneous, Dimension 1, Radical, Prime
+    Groebner basis:
+    [
+        a,
+        b + 2*e,
+        c^2 + 1/2*i^2,
+        c*e + 1/2*h*i,
+        c*h - e*i,
+        c*i + e*h,
+        d,
+        e^2 - 1/2*i^2,
+        f + i,
+        g^2 - 3/2*i^2,
+        h^2 + i^2
+    ]
+]
+Case {a,c}. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 8 ]
+[
+    Ideal of Polynomial ring of rank 9 over Rational Field
+    Order: Lexicographical
+    Variables: a, b, c, d, e, f, g, h, i
+    Homogeneous, Dimension 1, Radical, Prime
+    Groebner basis:
+    [
+        a,
+        b^2 - 3/2*i^2,
+        c,
+        d + f,
+        e + f,
+        f^2 - 1/2*i^2,
+        g + i,
+        h^2 + 1/2*i^2
+    ]
+]
+Case {c,d}. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 16 ]
+[
+    Ideal of Polynomial ring of rank 9 over Rational Field
+    Order: Lexicographical
+    Variables: a, b, c, d, e, f, g, h, i
+    Homogeneous, Dimension 1, Radical, Prime
+    Groebner basis:
+    [
+        a + i,
+        b + g,
+        c,
+        d,
+        e + i,
+        f + g,
+        g^2 - 2*i^2,
+        h
+    ]
+]
+Case {d,f}. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 8 ]
+[
+    Ideal of Polynomial ring of rank 9 over Rational Field
+    Order: Lexicographical
+    Variables: a, b, c, d, e, f, g, h, i
+    Homogeneous, Dimension 1, Radical, Prime
+    Groebner basis:
+    [
+        a + c,
+        b^2 - 2*i^2,
+        b*c + h*i,
+        b*h + 2*c*i,
+        b*i - c*h,
+        c^2 + i^2,
+        d,
+        e,
+        f,
+        g + i,
+        h^2 + 2*i^2
+    ]
+]
+Case {d,e}. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 8 ]
+[
+    Ideal of Polynomial ring of rank 9 over Rational Field
+    Order: Lexicographical
+    Variables: a, b, c, d, e, f, g, h, i
+    Homogeneous, Dimension 1, Radical, Prime
+    Groebner basis:
+    [
+        a + c,
+        b^2 - 2*i^2,
+        b*c + h*i,
+        b*h + 2*c*i,
+        b*i - c*h,
+        c^2 + i^2,
+        d,
+        e,
+        f,
+        g + i,
+        h^2 + 2*i^2
+    ]
+]
+Case {c,e}. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 16 ]
+[
+    Ideal of Polynomial ring of rank 9 over Rational Field
+    Order: Lexicographical
+    Variables: a, b, c, d, e, f, g, h, i
+    Homogeneous, Dimension 1, Radical, Prime
+    Groebner basis:
+    [
+        a + h,
+        b + i,
+        c,
+        d + i,
+        e,
+        f + h,
+        g,
+        h^2 + i^2
+    ]
+]
+Case {f,h}. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 16 ]
+[
+    Ideal of Polynomial ring of rank 9 over Rational Field
+    Order: Lexicographical
+    Variables: a, b, c, d, e, f, g, h, i
+    Homogeneous, Dimension 1, Radical, Prime
+    Groebner basis:
+    [
+        a,
+        b + i,
+        c + g,
+        d + i,
+        e + g,
+        f,
+        g^2 - 1/2*i^2,
+        h
+    ]
+]
+Case {a,i}. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 16 ]
+[
+    Ideal of Polynomial ring of rank 9 over Rational Field
+    Order: Lexicographical
+    Variables: a, b, c, d, e, f, g, h, i
+    Homogeneous, Dimension 1, Radical, Prime
+    Groebner basis:
+    [
+        a,
+        b + g,
+        c + h,
+        d + h,
+        e,
+        f + g,
+        g^2 + h^2,
+        i
+    ]
+]
