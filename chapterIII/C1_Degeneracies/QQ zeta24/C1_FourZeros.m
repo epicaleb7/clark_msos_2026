@@ -1,9 +1,9 @@
-// load "Step2/C1_Degeneracies/QQ zeta24/C1_FourZeros.m";
+// load "chapterIII/C1_Degeneracies/QQ zeta24/C1_FourZeros.m";
 
 load "SetupX.m";
 load "SetupX_QQal.m";
-load "Step2/C1_Degeneracies/QQ zeta24/SetupX_QQalal.m";
-load "Step2/C1_Degeneracies/QQ zeta24/ReduceByGInQQalal.m";
+load "chapterIII/C1_Degeneracies/QQ zeta24/SetupX_QQalal.m";
+load "chapterIII/C1_Degeneracies/QQ zeta24/ReduceByAInQQalal.m";
 
 // ------------------------------------------------------------------
 "---------------- Degenerate points with four zero coordinates -------------------------";

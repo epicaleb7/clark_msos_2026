@@ -1,0 +1,180 @@
+Last login: Fri Oct 30 22:51:28 on ttys006
+You have new mail.
+calebclark@gobblegobblegobblegobblegobblegobblegobble ~ % magma
+Magma V2.29-6     Sat Oct 31 2026 18:56:53 on gobblegobblegobblegobblegobblegobblegobble [Seed = 496166912]
+Type ? for help.  Type <Ctrl>-D to quit.
+
+[PC] While attempting to compile /Applications/Magma/CalebsMagmaScripts (Data file non-existent):
+[PC] Can't open input file /Applications/Magma/CalebsMagmaScripts (Is a directory)
+
+Cannot attach file /Applications/Magma/CalebsMagmaScripts referenced from spec file 
+/Applications/Magma/CalebsMagmaScripts/mymagma.spec
+
+[PC] While attempting to compile /Users/calebclark/Documents/UNIVERSITY/CORE/JV/MasterfulMagmaScripts (Data file 
+[PC] non-existent):
+[PC] Can't open input file /Users/calebclark/Documents/UNIVERSITY/CORE/JV/MasterfulMagmaScripts (Is a directory)
+
+Cannot attach file /Users/calebclark/Documents/UNIVERSITY/CORE/JV/MasterfulMagmaScripts referenced from spec file 
+/Applications/Magma/CalebsMagmaScripts/mymagma.spec
+> ChangeDirectory("/Users/calebclark/Documents/UNIVERSITY/CORE/JV/MasterfulMagmaScriptsBackup250926"); load "Step2/C1_Deg\
+eneracies/calebStyle/by_cases_caleb_style/C1_ThreeZeros.m";
+Loading "Step2/C1_Degeneracies/calebStyle/by_cases_caleb_style/C1_ThreeZeros.m"
+Loading "SetupX.m"
+true
+SetupX loaded.
+Loading "SetupX_QQal.m"
+IF THINGS ARE BROKEN, ITS BECAUSE I CHANGED ftal TO BE ft_al !!! SO EVERYTHING IS UNDERSCORE EXCEPT S, QQ.
+true
+Loading "Step2/C1_Degeneracies/calebStyle/by_cases_caleb_style/ReduceByGInQQal.m"
+Reduce generic ideal by symmetries In QQ_al - loaded as ReduceByGInQQal (and IsProjEmpty).
+---------------- Degenerate points with three zero coordinates -------------------------
+Empty cases (should all be true):
+Case {c,d,i}:
+true
+Case {a,b,c}:
+true
+Case {a,c,f}:
+true
+Case {c,g,h}:
+true
+Case {b,d,e}:
+true
+Case {d,e,g}:
+true
+Case {b,e,i}:
+true
+Case {c,d,f}:
+true
+Case {b,f,i}:
+true
+Case {a,e,g}:
+true
+Case {b,c,f}:
+true
+Case {a,c,g}:
+true
+Case {b,d,h}:
+true
+Case {b,d,i}. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 32 ]
+[
+    Ideal of Polynomial ring of rank 9 over QQal
+    Order: Lexicographical
+    Variables: a_al, b_al, c_al, d_al, e_al, f_al, g_al, h_al, i_al
+    Homogeneous, Dimension 1, Radical, Prime
+    Groebner basis:
+    [
+        a_al + h_al,
+        b_al,
+        c_al + 1/2*(zeta_8^3 - zeta_8)*h_al,
+        d_al,
+        e_al + 1/2*(zeta_8^3 - zeta_8)*h_al,
+        f_al + h_al,
+        g_al + 1/2*(zeta_8^3 - zeta_8)*h_al,
+        i_al
+    ]
+]
+Case {b,e,h}. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 32 ]
+[
+    Ideal of Polynomial ring of rank 9 over QQal
+    Order: Lexicographical
+    Variables: a_al, b_al, c_al, d_al, e_al, f_al, g_al, h_al, i_al
+    Homogeneous, Dimension 1, Radical, Prime
+    Groebner basis:
+    [
+        a_al + zeta_8^2*i_al,
+        b_al,
+        c_al + i_al,
+        d_al + (zeta_8^3 - zeta_8)*i_al,
+        e_al,
+        f_al + (zeta_8^3 + zeta_8)*i_al,
+        g_al + zeta_8^2*i_al,
+        h_al
+    ]
+]
+Case {a,e,i}. Empty?
+false
+Orbit count then ideals mod symmetry:
+[ 32 ]
+[
+    Ideal of Polynomial ring of rank 9 over QQal
+    Order: Lexicographical
+    Variables: a_al, b_al, c_al, d_al, e_al, f_al, g_al, h_al, i_al
+    Homogeneous, Dimension 1, Radical, Prime
+    Groebner basis:
+    [
+        a_al,
+        b_al + zeta_8^2*h_al,
+        c_al + h_al,
+        d_al + h_al,
+        e_al,
+        f_al + zeta_8^2*h_al,
+        g_al + zeta_8^2*h_al,
+        i_al
+    ]
+]
+---------------- Singular points of X, and comparison -------------------------
+Number of singular points:
+256
+Orbit count then ideals mod symmetry for Sing(X):
+[ 128, 64, 64 ]
+[
+    Ideal of Polynomial ring of rank 9 over QQal
+    Order: Lexicographical
+    Variables: a_al, b_al, c_al, d_al, e_al, f_al, g_al, h_al, i_al
+    Homogeneous, Dimension 1, Radical, Prime
+    Groebner basis:
+    [
+        a_al + h_al,
+        b_al,
+        c_al + 1/2*(zeta_8^3 - zeta_8)*h_al,
+        d_al,
+        e_al + 1/2*(zeta_8^3 - zeta_8)*h_al,
+        f_al + h_al,
+        g_al + 1/2*(zeta_8^3 - zeta_8)*h_al,
+        i_al
+    ],
+    Ideal of Polynomial ring of rank 9 over QQal
+    Order: Lexicographical
+    Variables: a_al, b_al, c_al, d_al, e_al, f_al, g_al, h_al, i_al
+    Homogeneous, Dimension 1, Radical, Prime
+    Groebner basis:
+    [
+        a_al + zeta_8^2*i_al,
+        b_al + (zeta_8^3 - zeta_8)*i_al,
+        c_al + zeta_8^2*i_al,
+        d_al,
+        e_al,
+        f_al,
+        g_al + i_al,
+        h_al + (zeta_8^3 + zeta_8)*i_al
+    ],
+    Ideal of Polynomial ring of rank 9 over QQal
+    Order: Lexicographical
+    Variables: a_al, b_al, c_al, d_al, e_al, f_al, g_al, h_al, i_al
+    Homogeneous, Dimension 1, Radical, Prime
+    Groebner basis:
+    [
+        a_al + zeta_8^2*i_al,
+        b_al + i_al,
+        c_al,
+        d_al + i_al,
+        e_al,
+        f_al + zeta_8^2*i_al,
+        g_al,
+        h_al + zeta_8^2*i_al
+    ]
+]
+Is each 3-zero point singular? ({b,d,i}, {b,e,h}, {a,e,i}):
+true
+true
+true
+true
+true
+true
+>                                                                                                                      

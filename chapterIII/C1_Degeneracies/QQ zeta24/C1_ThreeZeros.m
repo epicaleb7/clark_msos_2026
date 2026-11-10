@@ -1,11 +1,11 @@
-// load "Step2/C1_Degeneracies/QQ zeta24/C1_ThreeZeros.m";
+// load "chapterIII/C1_Degeneracies/QQ zeta24/C1_ThreeZeros.m";
 // NOT RUN over QQalal (30 Oct): too slow over QQal(rt3), and sqrt3 is not needed here -- every component is
 // already defined over QQal, so the output is the same as ../by_cases_caleb_style/C1_ThreeZeros_output.txt.
 
 load "SetupX.m";
 load "SetupX_QQal.m";
-load "Step2/C1_Degeneracies/QQ zeta24/SetupX_QQalal.m";
-load "Step2/C1_Degeneracies/QQ zeta24/ReduceByGInQQalal.m";
+load "chapterIII/C1_Degeneracies/QQ zeta24/SetupX_QQalal.m";
+load "chapterIII/C1_Degeneracies/QQ zeta24/ReduceByAInQQalal.m";
 
 // ------------------------------------------------------------------
 "---------------- Degenerate points with three zero coordinates -------------------------";
@@ -30,7 +30,7 @@ load "Step2/C1_Degeneracies/QQ zeta24/ReduceByGInQQalal.m";
 // Case {b,d,i} (two adjacent edges + far corner, D4-orbit size 4)
 ideal := defIdealalal + Ideal([b_alal, d_alal, i_alal]);
 "Case {b,d,i}. Empty?"; IsProjEmpty(ideal);
-GIMS_bdi, OC := ReduceByGInQQalal(RadicalDecomposition(ideal));
+GIMS_bdi, OC := ReduceByAInQQalal(RadicalDecomposition(ideal));
 "Orbit count then ideals mod symmetry:";
 OC;
 GIMS_bdi;
@@ -39,7 +39,7 @@ GIMS_bdi;
 // Case {b,e,h} (middle column, D4-orbit size 2)
 ideal := defIdealalal + Ideal([b_alal, e_alal, h_alal]);
 "Case {b,e,h}. Empty?"; IsProjEmpty(ideal);
-GIMS_beh, OC := ReduceByGInQQalal(RadicalDecomposition(ideal));
+GIMS_beh, OC := ReduceByAInQQalal(RadicalDecomposition(ideal));
 "Orbit count then ideals mod symmetry:";
 OC;
 GIMS_beh;
@@ -48,7 +48,7 @@ GIMS_beh;
 // Case {a,e,i} (diagonal, D4-orbit size 2)
 ideal := defIdealalal + Ideal([a_alal, e_alal, i_alal]);
 "Case {a,e,i}. Empty?"; IsProjEmpty(ideal);
-GIMS_aei, OC := ReduceByGInQQalal(RadicalDecomposition(ideal));
+GIMS_aei, OC := ReduceByAInQQalal(RadicalDecomposition(ideal));
 "Orbit count then ideals mod symmetry:";
 OC;
 GIMS_aei;
@@ -59,13 +59,13 @@ GIMS_aei;
 Xalal      := Scheme(ProjectiveSpace(Salal), defIdealalal);
 IXalalSing := DefiningIdeal(SingularSubscheme(Xalal));
 Palallist  := RadicalDecomposition(IXalalSing);
-GIMSsing, OCsing := ReduceByGInQQalal(Palallist);
+GIMSsing, OCsing := ReduceByAInQQalal(Palallist);
 "Number of singular points:"; #Palallist;
 "Orbit count then ideals mod symmetry for Sing(X):";
 OCsing;
 GIMSsing;
 
-// V(P) inside V(IXalalSing) iff IXalalSing subset P (P prime). Sing(X) is G-invariant, so one P per orbit is enough.
+// V(P) inside V(IXalalSing) iff IXalalSing subset P (P prime). Sing(X) is A-invariant, so one P per orbit is enough.
 "Is each 3-zero point singular? ({b,d,i}, {b,e,h}, {a,e,i}):";
 IXalalSing subset GIMS_bdi[1];
 IXalalSing subset GIMS_beh[1];

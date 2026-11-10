@@ -1,4 +1,4 @@
-// load "Step1/1_IdealOfLines_al.m";
+// load "chapterII/IdealOfLines_al.m";
 
 "IDEAL OF LINES NOW FOR QQal: --------------------------------------";
 load "SetupX_QQal.m";
@@ -34,4 +34,4 @@ Dimension(lineIdeal);
 "Radical decomposition:";
 RadicalDecomposition(lineIdeal);
 
-"1_IdealOfLines_al loaded."
+"IdealOfLines_al loaded."

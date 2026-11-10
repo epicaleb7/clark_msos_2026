@@ -1,8 +1,8 @@
-// load "Step2/C1_Degeneracies/QQ zeta8/C1_ThreeZeros.m";
+// load "chapterIII/C1_Degeneracies/QQ zeta8/C1_ThreeZeros.m";
 
 load "SetupX.m";
 load "SetupX_QQal.m";
-load "Step2/C1_Degeneracies/QQ zeta8/ReduceByGInQQal.m";
+load "chapterIII/C1_Degeneracies/QQ zeta8/ReduceByAInQQal.m";
 
 // ------------------------------------------------------------------
 "---------------- Degenerate points with three zero coordinates -------------------------";
@@ -27,7 +27,7 @@ load "Step2/C1_Degeneracies/QQ zeta8/ReduceByGInQQal.m";
 // Case {b,d,i} (two adjacent edges + far corner, D4-orbit size 4)
 ideal := defIdealal + Ideal([b_al, d_al, i_al]);
 "Case {b,d,i}. Empty?"; IsProjEmpty(ideal);
-GIMS_bdi, OC := ReduceByGInQQal(RadicalDecomposition(ideal));
+GIMS_bdi, OC := ReduceByAInQQal(RadicalDecomposition(ideal));
 "Orbit hits then ideals mod symmetry of minimal prime components:";
 OC;
 GIMS_bdi;
@@ -36,7 +36,7 @@ GIMS_bdi;
 // Case {b,e,h} (middle column, D4-orbit size 2)
 ideal := defIdealal + Ideal([b_al, e_al, h_al]);
 "Case {b,e,h}. Empty?"; IsProjEmpty(ideal);
-GIMS_beh, OC := ReduceByGInQQal(RadicalDecomposition(ideal));
+GIMS_beh, OC := ReduceByAInQQal(RadicalDecomposition(ideal));
 "Orbit hits then ideals mod symmetry of minimal prime components:";
 OC;
 GIMS_beh;
@@ -45,7 +45,7 @@ GIMS_beh;
 // Case {a,e,i} (diagonal, D4-orbit size 2)
 ideal := defIdealal + Ideal([a_al, e_al, i_al]);
 "Case {a,e,i}. Empty?"; IsProjEmpty(ideal);
-GIMS_aei, OC := ReduceByGInQQal(RadicalDecomposition(ideal));
+GIMS_aei, OC := ReduceByAInQQal(RadicalDecomposition(ideal));
 "Orbit hits then ideals mod symmetry of minimal prime components:";
 OC;
 GIMS_aei;
@@ -56,13 +56,13 @@ GIMS_aei;
 Xal      := Scheme(ProjectiveSpace(Sal), defIdealal);
 IXalSing := DefiningIdeal(SingularSubscheme(Xal));
 Pallist  := RadicalDecomposition(IXalSing);
-GIMSsing, OCsing := ReduceByGInQQal(Pallist);
+GIMSsing, OCsing := ReduceByAInQQal(Pallist);
 "Number of singular points:"; #Pallist;
 "Orbit count then ideals mod symmetry for Sing(X):";
 OCsing;
 GIMSsing;
 
-// V(P) inside V(IXalSing) iff IXalSing subset P (P prime). Sing(X) is G-invariant, so one P per orbit is enough.
+// V(P) inside V(IXalSing) iff IXalSing subset P (P prime). Sing(X) is A-invariant, so one P per orbit is enough.
 "Is each 3-zero point singular? ({b,d,i}, {b,e,h}, {a,e,i}):";
 IXalSing subset GIMS_bdi[1];Radical(IXalSing) subset Radical(GIMS_bdi[1]);
 IXalSing subset GIMS_beh[1];Radical(IXalSing) subset Radical(GIMS_beh[1]);

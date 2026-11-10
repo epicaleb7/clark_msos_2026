@@ -1,88 +1,27 @@
-// load "Week6/6B_Clean.m";
+// load "chapterIV/C_ComputeMatrices.m";
 
-load "Week6/6A.m";
-// load "Step2/2_ReduceGenericRadicalBySymmetries.m";
-load 
-"Week6/GroupActionNewWay.m";
+load "chapterIV/B_GroupIndFunctions.m";
 
-load "Week6/6_G_ConjugacyClasses.m";
-
-
-// Action of tau_m on diff 2-form basis.
-
-// Given a 2-form as a vector with 165 coefficients
-egcubic := monBig[1];
-egvec := [MonomialCoefficient(egcubic, m) : m in mons]; // -a^3 - a*d^2 + a*h^2 + a*i^2
-// output tau_m(egvec)
-
-function theta(cubicForm, monomialBasis) // form -> vector
-    coefficientVector := [MonomialCoefficient(cubicForm, m) : m in monomialBasis];
-    return coefficientVector;
-end function;
-
-function thetaInv(coefficientVector, monomialBasis) // vector -> form
-    return &+[coefficientVector[i] * monomialBasis[i]: i in [1..#monomialBasis]
-                | coefficientVector[i] ne 0];
-end function;
-assert theta(egcubic,mons) eq egvec;
-assert theta(thetaInv(egvec,mons),mons) eq egvec;
-
-function thetaInvNice(coefficientVector, monomialBasis)
-    seq := Eltseq(coefficientVector);
-    nonzeroEntries := [i : i in [1..#seq] | seq[i] ne 0];
-    assert #nonzeroEntries eq 1;
-    i := nonzeroEntries[1];
-    return seq[i] * monomialBasis[i];
-end function;
-
-
-// ------ Algorithm. (X6B:11,12) ------
-XRowsOfT := Submatrix(T,55,1,111,165);
-assert XRowsOfT eq Matrix(QQ, [theta(f,mons): f in monCubics]);
-
-    // 1. Take b_i
-function GroupActOnMonomialVec(b_i, g_hom, totalFlip)
-
-    // 2. Convert into the monomial (apply theta^-1)
-    thi_b_i := thetaInvNice(b_i,mons);
-
-    // 3. Apply g via homomorhoPowhisms
-    g_thi_b_i := totalFlip * (g_hom(thi_b_i));
-
-    // 4. Apply theta
-    th_g_thi_b_i := Vector(theta(g_thi_b_i, mons));
-
-    // 5&6. Project, extract coefficients in b_j (of B_X) basis.
-    assert IsConsistent(T,th_g_thi_b_i);
-    g_i, _ := Solution(T,th_g_thi_b_i);
-    
-        // project: extract the last 111 coefficients!
-    g_i := Vector(Eltseq(g_i)[55..165]);
-
-
-    return g_i;
-end function;
-
-
-
+ccs := ConjugacyClasses(A);
+ConjClassReps := [cc[3] : cc in ccs];
 
 
 // ------ Correspond Permutation-group-on-256-objects back to Act-on-x  ------
-tInD4 := D4.2;
+tInD4 := D4.2; // to disambiguate from t in semidirect product
 rhoInD4 := D4.1;
-function DecomposeD4(d4Elt)
+function DecomposeD4(d4Elt) // turn permutationgroupelt into homomorphism index
     // loop through and check
     for tPow in [0,1] do
         for rhoPow in [0..3] do
             if d4Elt eq tInD4^tPow * rhoInD4^rhoPow then 
-                return tPow, rhoPow; 
+                return tPow, rhoPow; // returns powers to put on homomorphisms
             end if;
         end for;
     end for;
     error "d4Elt not of the form t^tPow * rho^rhoPow";
 end function;
 
-function DecomposeC28(flipAbstractEltC28)
+function DecomposeC28(flipAbstractEltC28) 
     flipC29 := flipAbstractEltC28 @@ q; // take some preimage in C29 // e.g. tau1 tau4 tau5 .. tau9
     coords := [Integers()!c : c in Eltseq(flipC29)]; // e.g. [1,0,0,1,1,1,1,1,1]
 
@@ -91,7 +30,7 @@ function DecomposeC28(flipAbstractEltC28)
         flipC29 := flipC29 + prodFlip;
         coords := [Integers()!c : c in Eltseq(flipC29)]; // e.g. [0,1,1,0,0,0,0,0,0]
     end if;
-    return coords; // e.g. 
+    return coords; // returns powers to put on homomorphisms
 end function;
 
 
@@ -100,7 +39,7 @@ end function;
 
 
 
-function calculate_matrix_and_trace(ccRep);
+function calculate_matrix_and_trace_A(ccRep);
     // by uniqueness of factorisation we can find the unique factors
     d4Factor := proj_D4(ccRep);
     c28Factor := (ccRep * emb_D4(d4Factor)^-1) @@ emb_C29mC2; // invert then take some pre-image
@@ -152,11 +91,11 @@ end function;
 
 // error '';
 // ------ Implement Algorithm on conjugacy class reps only ------
-// (ConjClasReps should already be [c[3] : c in ConjugacyClasses(G)] from the loaded script)
+// (ConjClasReps should already be [c[3] : c in ConjugacyClasses(A)] from the loaded script)
 
 trace_of_ccs_list := [];
 for ccRep in ConjClassReps do
-    matrix, trace_of_cc := calculate_matrix_and_trace(ccRep);
+    matrix, trace_of_cc := calculate_matrix_and_trace_A(ccRep);
     Append(~trace_of_ccs_list,trace_of_cc);
 end for;
 
@@ -165,11 +104,11 @@ trace_of_ccs_list;
 chi_Omg2 := Vector(trace_of_ccs_list);
 
 
-CT := CharacterTable(G);
+CT := CharacterTable(A);
 CharTableMatrix := Matrix([
     Eltseq(chi) 
     : chi in CT]);
-assert Nrows(CharTableMatrix) eq Nrows(CharTableMatrix) and Nrows(CharTableMatrix) eq #ConjugacyClasses(G);
+assert Nrows(CharTableMatrix) eq Ncols(CharTableMatrix) and Nrows(CharTableMatrix) eq #ConjugacyClasses(A);
 
 
 father := Parent(CharTableMatrix[1][1]); // some cyclotomic field thing

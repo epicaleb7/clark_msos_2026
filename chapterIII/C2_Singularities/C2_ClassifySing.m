@@ -1,9 +1,9 @@
-// load "Step2/C2_Singularities/C2_ClassifySing.m";
-// CURRENT C2 script: Sing(X) over QQ(zeta8) = 256 points = 128 + 64 + 64 in 3 G-orbits, each of multiplicity 2.
+// load "chapterIII/C2_Singularities/C2_ClassifySing.m";
+// CURRENT C2 script: Sing(X) over QQ(zeta8) = 256 points = 128 + 64 + 64 in 3 A-orbits, each of multiplicity 2.
 
 load "SetupX.m";
 load "SetupX_QQal.m";
-// load "Step2/C2_Singularities/2_ReduceIXSingBySymmetries.m";
+// load "chapterIII/C2_Singularities/2_ReduceIXSingBySymmetries.m";
 
 // ORGANISE THIS CODE INTO SEPARATE .M FILES LATER.
 
@@ -14,8 +14,8 @@ time Pallist := RadicalDecomposition(IXalSing);
 "C2 (compute XalSing) loaded.";
 
 "----- Now we REDUCE XalSing. -----";
-load "Step2/lib/ReduceByGInQQal.m";
-time SingIdealsModSymmetryal, OrbitCountSingal := ReduceByGInQQal(Pallist);
+load "chapterIII/lib/ReduceByAInQQal.m";
+time SingIdealsModSymmetryal, OrbitCountSingal := ReduceByAInQQal(Pallist);
 
 
 "----- Now we CLASSIFY the (3) points. -----";

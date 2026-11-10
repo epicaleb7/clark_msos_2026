@@ -1,4 +1,5 @@
-// load "Week6/6_G_ConjugacyClasses.m";
+// load "chapterIV/_ConjugacyClasses.m";
+// Define abstract groups and compute conjugacy classes.
 
 // Defining constituent
 D4 := DihedralGroup(4); // H
@@ -31,16 +32,16 @@ qaF := q(aF); qbF := q(bF); qcF := q(cF); qdF := q(dF); qeF := q(eF); qfF := q(f
 
 // For each generator of D4 construct an automorphism Aut(C29mC2)
 
-rhoAut := hom<C29mC2 -> C29mC2 | 
-// qaF -> qcF, <-- omit action of a since qaF = qbF ... qiF in quotient
-qcF -> qiF,
-qiF -> qgF, 
-qgF -> qaF,
-qbF -> qfF,
-qfF -> qhF,
-qhF -> qdF,
-qdF -> qbF,
-qeF -> qeF>;
+// rhoAut := hom<C29mC2 -> C29mC2 | 
+// // qaF -> qcF, <-- omit action of a since qaF = qbF ... qiF in quotient
+// qcF -> qiF,
+// qiF -> qgF, 
+// qgF -> qaF,
+// qbF -> qfF,
+// qfF -> qhF,
+// qhF -> qdF,
+// qdF -> qbF,
+// qeF -> qeF>;
 /* 
 the purpose of that is to build the automorphism that looks like 
 conjugation: t |-> rho t rho^-1 in the semidirect product. 
@@ -48,7 +49,7 @@ so for example flipping the top left entry a, if I conjugate by rho (ccw),
 this becomes a flip of the top right entry c. rhoAut is not itself clockwise; 
 it sends flips in the opposite way because that's exactly how conjugation works.
 */ 
-// Claude says that SemidirectProduct uses rho^-1 n rho, not what I said.
+// SemidirectProduct uses rho^-1 n rho, not what I said.
 // Let's fix this:
 rhoAut := hom<C29mC2 -> C29mC2 | 
 qcF -> qaF,
@@ -86,20 +87,21 @@ t -> tAut
 // conjugation := hom<C28 -> Aut(D8) | flipvec -> 
 //     hom<D4 -> D4 | d -> flipvec * d * flipvec^-1
 //     >;
-G, emb_C29mC2, emb_D4, proj_D4 := SemidirectProduct(C29mC2, D4, phiHN);
+A, emb_C29mC2, emb_D4, proj_D4 := SemidirectProduct(C29mC2, D4, phiHN);
 
-printf "num. CC = "; #ConjugacyClasses(G);
-// ConjugacyClasses(G);
-
-
+printf "num. CC of A = "; #ConjugacyClasses(A);
+// ConjugacyClasses(A);
 
 
 
 
 
 
-/* Need labels for the generators of G! (So that I can interpret the cc labels.)  */
-gens := Setseq(Generators(G));
+
+/* No longer necessary since my approach is less character table based.
+But here for interest. */
+/* Need labels for the generators of A! (So that I can interpret the cc labels.)  */
+gens := Setseq(Generators(A));
 
 runOutput := false;
 if runOutput then
@@ -120,7 +122,7 @@ if runOutput then
     for x in myGens do
         for i in [1..#gens] do
             if gens[i] eq x[2] then
-                print x[1], " -> G generator ", i;
+                print x[1], " -> A generator ", i;
             end if;
         end for;
     end for;
@@ -128,16 +130,13 @@ if runOutput then
 
 
 // emb_qaF := gens[Index(gens, embC29mC2(qaF))]; <-- again. a is not a generator!
-emb_qbF := gens[Index(gens, emb_C29mC2(qbF))]; // G.1
-emb_qcF := gens[Index(gens, emb_C29mC2(qcF))]; // G.2
-emb_qdF := gens[Index(gens, emb_C29mC2(qdF))]; // G.3
-emb_qeF := gens[Index(gens, emb_C29mC2(qeF))]; // G.4 
-emb_qfF := gens[Index(gens, emb_C29mC2(qfF))]; // G.5
-emb_qgF := gens[Index(gens, emb_C29mC2(qgF))]; // G.6
-emb_qhF := gens[Index(gens, emb_C29mC2(qhF))]; // G.7
-emb_qiF := gens[Index(gens, emb_C29mC2(qiF))]; // G.8
-emb_rho := gens[Index(gens, emb_D4(rho))];     // G.9
-emb_t   := gens[Index(gens, emb_D4(t))];       // G.10
-
-ccs := ConjugacyClasses(G);
-ConjClassReps := [cc[3] : cc in ccs];
+emb_qbF := gens[Index(gens, emb_C29mC2(qbF))]; // A.1
+emb_qcF := gens[Index(gens, emb_C29mC2(qcF))]; // A.2
+emb_qdF := gens[Index(gens, emb_C29mC2(qdF))]; // A.3
+emb_qeF := gens[Index(gens, emb_C29mC2(qeF))]; // A.4 
+emb_qfF := gens[Index(gens, emb_C29mC2(qfF))]; // A.5
+emb_qgF := gens[Index(gens, emb_C29mC2(qgF))]; // A.6
+emb_qhF := gens[Index(gens, emb_C29mC2(qhF))]; // A.7
+emb_qiF := gens[Index(gens, emb_C29mC2(qiF))]; // A.8
+emb_rho := gens[Index(gens, emb_D4(rho))];     // A.9
+emb_t   := gens[Index(gens, emb_D4(t))];       // A.10

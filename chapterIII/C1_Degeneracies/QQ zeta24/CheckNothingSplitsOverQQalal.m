@@ -1,4 +1,4 @@
-// load "Step2/C1_Degeneracies/QQ zeta24/CheckNothingSplitsOverQQalal.m";
+// load "chapterIII/C1_Degeneracies/QQ zeta24/CheckNothingSplitsOverQQalal.m";
 // Counts components over QQ(zeta8, sqrt3) = CyclotomicField(24) (fast absolute version of QQal(rt3)), no orbit reduction.
 load "SetupX.m";
 K<z24> := CyclotomicField(24);   // = QQ(zeta8, sqrt3)

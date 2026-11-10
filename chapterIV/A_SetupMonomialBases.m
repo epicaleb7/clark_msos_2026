@@ -1,4 +1,4 @@
-// load "Week6/6A.m";
+// load "chapterIV/A_SetupMonomialBases.m";
 
 load "SetupX.m";
 
@@ -8,10 +8,10 @@ runOutput := false;
 
 //// 1. write the basis
 monCubics := MonomialsOfDegree(S,3, {g: g in GroebnerBasis(defIdeal)}); // a la JV
-#monCubics; // 111 as expected (from Koszul arguments).
+"# cubics (expect 165-54 = 111):"; #monCubics; // 111 as expected (from Koszul arguments).
 
 mons := MonomialsOfDegree(S,3);
-#mons;
+"# number of total mon (expect 11 choose 3 = 165)";#mons;
 
 
 /* complementary basis:

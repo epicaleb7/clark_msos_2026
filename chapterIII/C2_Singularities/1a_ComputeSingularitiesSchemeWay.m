@@ -1,4 +1,4 @@
-//% load "Step2/C2_Singularities/1a_ComputeSingularitiesSchemeWay.m";
+//% load "chapterIII/C2_Singularities/1a_ComputeSingularitiesSchemeWay.m";
 // Sing(X) over QQ via Magma's SingularSubscheme. Defines X, XSing, IXSing, Plist (its RadicalDecomposition).
 
 load "SetupX.m";

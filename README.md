@@ -17,16 +17,20 @@ or, inside Magma, `ChangeDirectory("<path to this folder>");` once. Then load an
 using the path in its first-line comment, e.g.
 
 ```
-load "Step2/C2_Singularities/C2_ClassifySing.m";
+load "chapterIII/C2_Singularities/C2_ClassifySing.m";
 ```
 
 `SetupX.m` defines the ideal of X over QQ; `SetupX_QQal.m` the same over QQ(zeta_8).
 
+Particularly in Chapter IV, there are multiple dependent scripts, but all scripts load all relevant load scripts to them. So, for instance, to run the code that gives the decomposition of $\Omega_\mathrm{hol}^2(\widetilde{X})$, you need only run 'Step D' of `chapterIV/D_GModule.m`; A,B,C are dependencies that are loaded automatically.
+
 ## Layout
 
-- `Step1/`: ideal of the lines
-- `Step2/C2_Singularities/`: Sing(X)
-- `Step2/C1_Degeneracies/`: degeneracies, one file per case, over `QQ`, `QQ zeta8` = QQ(zeta_8) and `QQ zeta24` = QQ(zeta_24) = QQ(zeta_8, sqrt 3), with saved output
-- `Step2/lib/`: G-orbit reduction helpers
-- `Week6/`: group action and characters
-- `Week8/LemmaB.m`: Jacobian-minor check for Lemma B
+- `chapterII/`: ideal of the lines
+- `chapterIII/C2_Singularities/`: Sing(X)
+- `chapterIII/C1_Degeneracies/`: degeneracies, one file per case, over `QQ`, `QQ zeta8` = $\mathbb{Q}(\zeta_8) = \mathbb{Q}(\sqrt 2, i)$ and `QQ zeta24` = $\mathbb{Q}(\zeta_{24}) = \mathbb{Q}(\zeta_8,\sqrt{3})$, with saved output
+- `chapterIII/lib/`: A-orbit reduction helpers
+- `chapterIV/`: group action, characters, decomposition
+- `chapterIV/_LemmaB.m`: Jacobian-minor check for Lemma (number) (local coordinates when P lies in exactly one line)
+- `chapterIV/D4_only`: characters and decomposition for restriction representation of $D_4 \leq A$
+- `chapterIV/D4_only`: characters and decomposition for restriction representation of $G=(C_2^9)_\mathrm{even} \leq A$

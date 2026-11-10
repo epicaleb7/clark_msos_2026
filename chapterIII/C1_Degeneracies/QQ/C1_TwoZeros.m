@@ -1,7 +1,7 @@
-// load "Step2/C1_Degeneracies/QQ/C1_TwoZeros.m";
+// load "chapterIII/C1_Degeneracies/QQ/C1_TwoZeros.m";
 
 load "SetupX.m";
-load "Step2/C1_Degeneracies/QQ/ReduceByG.m";
+load "chapterIII/C1_Degeneracies/QQ/ReduceByA.m";
 
 // ------------------------------------------------------------------
 "---------------- Degenerate points with two zero coordinates -------------------------";
@@ -14,7 +14,7 @@ load "Step2/C1_Degeneracies/QQ/ReduceByG.m";
 // Case {a,d} (corner + adjacent edge, D4-orbit size 8)  -- exactly two zeros
 ideal := defIdeal + Ideal([a, d]);
 "Case {a,d}. Empty?"; IsProjEmpty(ideal);
-GIMS, OC := ReduceByG(RadicalDecomposition(ideal));
+GIMS, OC := ReduceByA(RadicalDecomposition(ideal));
 "Orbit count then ideals mod symmetry:";
 OC;
 GIMS;
@@ -23,7 +23,7 @@ GIMS;
 // Case {a,c} (two corners on one side, D4-orbit size 4)  -- exactly two zeros
 ideal := defIdeal + Ideal([a, c]);
 "Case {a,c}. Empty?"; IsProjEmpty(ideal);
-GIMS, OC := ReduceByG(RadicalDecomposition(ideal));
+GIMS, OC := ReduceByA(RadicalDecomposition(ideal));
 "Orbit count then ideals mod symmetry:";
 OC;
 GIMS;
@@ -32,7 +32,7 @@ GIMS;
 // Case {c,d} (corner + far edge, D4-orbit size 8)  -- forces h = 0 too
 ideal := defIdeal + Ideal([c, d]);
 "Case {c,d}. Empty?"; IsProjEmpty(ideal);
-GIMS, OC := ReduceByG(RadicalDecomposition(ideal));
+GIMS, OC := ReduceByA(RadicalDecomposition(ideal));
 "Orbit count then ideals mod symmetry:";
 OC;
 GIMS;
@@ -40,7 +40,7 @@ GIMS;
 // Case {d,f} (two opposite edges, D4-orbit size 2)  -- forces e = 0 too
 ideal := defIdeal + Ideal([d, f]);
 "Case {d,f}. Empty?"; IsProjEmpty(ideal);
-GIMS, OC := ReduceByG(RadicalDecomposition(ideal));
+GIMS, OC := ReduceByA(RadicalDecomposition(ideal));
 "Orbit count then ideals mod symmetry:";
 OC;
 GIMS;
@@ -48,7 +48,7 @@ GIMS;
 // Case {d,e} (edge + centre, D4-orbit size 4)  -- forces f = 0 too
 ideal := defIdeal + Ideal([d, e]);
 "Case {d,e}. Empty?"; IsProjEmpty(ideal);
-GIMS, OC := ReduceByG(RadicalDecomposition(ideal));
+GIMS, OC := ReduceByA(RadicalDecomposition(ideal));
 "Orbit count then ideals mod symmetry:";
 OC;
 GIMS;
@@ -56,7 +56,7 @@ GIMS;
 // Case {c,e} (corner + centre, D4-orbit size 4)  -- forces g = 0 too
 ideal := defIdeal + Ideal([c, e]);
 "Case {c,e}. Empty?"; IsProjEmpty(ideal);
-GIMS, OC := ReduceByG(RadicalDecomposition(ideal));
+GIMS, OC := ReduceByA(RadicalDecomposition(ideal));
 "Orbit count then ideals mod symmetry:";
 OC;
 GIMS;
@@ -64,7 +64,7 @@ GIMS;
 // Case {f,h} (two adjacent edges, D4-orbit size 4)  -- forces a = 0 too
 ideal := defIdeal + Ideal([f, h]);
 "Case {f,h}. Empty?"; IsProjEmpty(ideal);
-GIMS, OC := ReduceByG(RadicalDecomposition(ideal));
+GIMS, OC := ReduceByA(RadicalDecomposition(ideal));
 "Orbit count then ideals mod symmetry:";
 OC;
 GIMS;
@@ -72,7 +72,7 @@ GIMS;
 // Case {a,i} (two opposite corners, D4-orbit size 2)  -- forces e = 0 too
 ideal := defIdeal + Ideal([a, i]);
 "Case {a,i}. Empty?"; IsProjEmpty(ideal);
-GIMS, OC := ReduceByG(RadicalDecomposition(ideal));
+GIMS, OC := ReduceByA(RadicalDecomposition(ideal));
 "Orbit count then ideals mod symmetry:";
 OC;
 GIMS;

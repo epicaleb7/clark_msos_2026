@@ -1,4 +1,4 @@
-// load "Week6/GroupActionNewWay.m";
+// load "chapterIV/_GroupActionNewWay.m";
 
 // Check SetupX is loaded.
 require Names(S) eq ["a","b","c","d","e","f","g","h","i"] :

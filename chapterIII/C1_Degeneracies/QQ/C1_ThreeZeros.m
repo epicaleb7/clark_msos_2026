@@ -1,7 +1,7 @@
-// load "Step2/C1_Degeneracies/QQ/C1_ThreeZeros.m";
+// load "chapterIII/C1_Degeneracies/QQ/C1_ThreeZeros.m";
 
 load "SetupX.m";
-load "Step2/C1_Degeneracies/QQ/ReduceByG.m";
+load "chapterIII/C1_Degeneracies/QQ/ReduceByA.m";
 
 // ------------------------------------------------------------------
 "---------------- Degenerate points with three zero coordinates -------------------------";
@@ -26,7 +26,7 @@ load "Step2/C1_Degeneracies/QQ/ReduceByG.m";
 // Case {b,d,i} (two adjacent edges + far corner, D4-orbit size 4)
 ideal := defIdeal + Ideal([b, d, i]);
 "Case {b,d,i}. Empty?"; IsProjEmpty(ideal);
-GIMS_bdi, OC := ReduceByG(RadicalDecomposition(ideal));
+GIMS_bdi, OC := ReduceByA(RadicalDecomposition(ideal));
 "Orbit count then ideals mod symmetry:";
 OC;
 GIMS_bdi;
@@ -35,7 +35,7 @@ GIMS_bdi;
 // Case {b,e,h} (middle column, D4-orbit size 2)
 ideal := defIdeal + Ideal([b, e, h]);
 "Case {b,e,h}. Empty?"; IsProjEmpty(ideal);
-GIMS_beh, OC := ReduceByG(RadicalDecomposition(ideal));
+GIMS_beh, OC := ReduceByA(RadicalDecomposition(ideal));
 "Orbit count then ideals mod symmetry:";
 OC;
 GIMS_beh;
@@ -44,7 +44,7 @@ GIMS_beh;
 // Case {a,e,i} (diagonal, D4-orbit size 2)
 ideal := defIdeal + Ideal([a, e, i]);
 "Case {a,e,i}. Empty?"; IsProjEmpty(ideal);
-GIMS_aei, OC := ReduceByG(RadicalDecomposition(ideal));
+GIMS_aei, OC := ReduceByA(RadicalDecomposition(ideal));
 "Orbit count then ideals mod symmetry:";
 OC;
 GIMS_aei;
@@ -55,13 +55,13 @@ GIMS_aei;
 XQ      := Scheme(ProjectiveSpace(S), defIdeal);
 IXSing := DefiningIdeal(SingularSubscheme(XQ));
 Plist  := RadicalDecomposition(IXSing);
-GIMSsing, OCsing := ReduceByG(Plist);
+GIMSsing, OCsing := ReduceByA(Plist);
 "Number of components of Sing(X) over QQ (Galois orbits of points):"; #Plist;
 "Orbit count then ideals mod symmetry for Sing(X):";
 OCsing;
 GIMSsing;
 
-// V(P) inside V(IXSing) iff IXSing subset P (P prime). Sing(X) is G-invariant, so one P per orbit is enough.
+// V(P) inside V(IXSing) iff IXSing subset P (P prime). Sing(X) is A-invariant, so one P per orbit is enough.
 "Is each 3-zero point singular? ({b,d,i}, {b,e,h}, {a,e,i}):";
 IXSing subset GIMS_bdi[1];
 IXSing subset GIMS_beh[1];

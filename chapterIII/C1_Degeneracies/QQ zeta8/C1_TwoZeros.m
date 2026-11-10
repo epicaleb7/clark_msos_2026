@@ -1,8 +1,8 @@
-// load "Step2/C1_Degeneracies/QQ zeta8/C1_TwoZeros.m";
+// load "chapterIII/C1_Degeneracies/QQ zeta8/C1_TwoZeros.m";
 
 load "SetupX.m";
 load "SetupX_QQal.m";
-load "Step2/C1_Degeneracies/QQ zeta8/ReduceByGInQQal.m";
+load "chapterIII/C1_Degeneracies/QQ zeta8/ReduceByAInQQal.m";
 
 // ------------------------------------------------------------------
 "---------------- Degenerate points with two zero coordinates -------------------------";
@@ -15,7 +15,7 @@ load "Step2/C1_Degeneracies/QQ zeta8/ReduceByGInQQal.m";
 // Case {a,d} (corner + adjacent edge, D4-orbit size 8)  -- exactly two zeros
 ideal := defIdealal + Ideal([a_al, d_al]);
 "Case {a,d}. Empty?"; IsProjEmpty(ideal);
-GIMS, OC := ReduceByGInQQal(RadicalDecomposition(ideal));
+GIMS, OC := ReduceByAInQQal(RadicalDecomposition(ideal));
 "Orbit count then ideals mod symmetry:";
 OC;
 GIMS;
@@ -24,7 +24,7 @@ GIMS;
 // Case {a,c} (two corners on one side, D4-orbit size 4)  -- exactly two zeros
 ideal := defIdealal + Ideal([a_al, c_al]);
 "Case {a,c}. Empty?"; IsProjEmpty(ideal);
-GIMS, OC := ReduceByGInQQal(RadicalDecomposition(ideal));
+GIMS, OC := ReduceByAInQQal(RadicalDecomposition(ideal));
 "Orbit count then ideals mod symmetry:";
 OC;
 GIMS;
@@ -33,7 +33,7 @@ GIMS;
 // Case {c,d} (corner + far edge, D4-orbit size 8)  -- forces h = 0 too
 ideal := defIdealal + Ideal([c_al, d_al]);
 "Case {c,d}. Empty?"; IsProjEmpty(ideal);
-GIMS, OC := ReduceByGInQQal(RadicalDecomposition(ideal));
+GIMS, OC := ReduceByAInQQal(RadicalDecomposition(ideal));
 "Orbit count then ideals mod symmetry:";
 OC;
 GIMS;
@@ -41,7 +41,7 @@ GIMS;
 // Case {d,f} (two opposite edges, D4-orbit size 2)  -- forces e = 0 too
 ideal := defIdealal + Ideal([d_al, f_al]);
 "Case {d,f}. Empty?"; IsProjEmpty(ideal);
-GIMS, OC := ReduceByGInQQal(RadicalDecomposition(ideal));
+GIMS, OC := ReduceByAInQQal(RadicalDecomposition(ideal));
 "Orbit count then ideals mod symmetry:";
 OC;
 GIMS;
@@ -49,7 +49,7 @@ GIMS;
 // Case {d,e} (edge + centre, D4-orbit size 4)  -- forces f = 0 too
 ideal := defIdealal + Ideal([d_al, e_al]);
 "Case {d,e}. Empty?"; IsProjEmpty(ideal);
-GIMS, OC := ReduceByGInQQal(RadicalDecomposition(ideal));
+GIMS, OC := ReduceByAInQQal(RadicalDecomposition(ideal));
 "Orbit count then ideals mod symmetry:";
 OC;
 GIMS;
@@ -57,7 +57,7 @@ GIMS;
 // Case {c,e} (corner + centre, D4-orbit size 4)  -- forces g = 0 too
 ideal := defIdealal + Ideal([c_al, e_al]);
 "Case {c,e}. Empty?"; IsProjEmpty(ideal);
-GIMS, OC := ReduceByGInQQal(RadicalDecomposition(ideal));
+GIMS, OC := ReduceByAInQQal(RadicalDecomposition(ideal));
 "Orbit count then ideals mod symmetry:";
 OC;
 GIMS;
@@ -65,7 +65,7 @@ GIMS;
 // Case {f,h} (two adjacent edges, D4-orbit size 4)  -- forces a = 0 too
 ideal := defIdealal + Ideal([f_al, h_al]);
 "Case {f,h}. Empty?"; IsProjEmpty(ideal);
-GIMS, OC := ReduceByGInQQal(RadicalDecomposition(ideal));
+GIMS, OC := ReduceByAInQQal(RadicalDecomposition(ideal));
 "Orbit count then ideals mod symmetry:";
 OC;
 GIMS;
@@ -73,7 +73,7 @@ GIMS;
 // Case {a,i} (two opposite corners, D4-orbit size 2)  -- forces e = 0 too
 ideal := defIdealal + Ideal([a_al, i_al]);
 "Case {a,i}. Empty?"; IsProjEmpty(ideal);
-GIMS, OC := ReduceByGInQQal(RadicalDecomposition(ideal));
+GIMS, OC := ReduceByAInQQal(RadicalDecomposition(ideal));
 "Orbit count then ideals mod symmetry:";
 OC;
 GIMS;

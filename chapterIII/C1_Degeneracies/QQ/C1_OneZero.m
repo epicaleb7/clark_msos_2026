@@ -1,18 +1,18 @@
-// load "Step2/C1_Degeneracies/QQ/C1_OneZero.m";
+// load "chapterIII/C1_Degeneracies/QQ/C1_OneZero.m";
 
 load "SetupX.m";
-load "Step2/C1_Degeneracies/QQ/ReduceByG.m";
+load "chapterIII/C1_Degeneracies/QQ/ReduceByA.m";
 
 // ------------------------------------------------------------------
 "---------------- Degenerate points along coordinate hyperplanes -------------------------";
 // Up to symmetry there are three cases: a = 0 (corner), b = 0 (edge), e = 0 (centre).
-// OC = how many components of X meet {x=0} land in each G-orbit, over QQ.
+// OC = how many components of X meet {x=0} land in each A-orbit, over QQ.
 // Over QQ a component can split further over QQbar (compare by_cases_caleb_style, over QQ(zeta8)).
 
 // Case a=0 (corner: a,c,g,i)
 ideal := defIdeal + Ideal(a);
 "Case a=0. Empty?"; IsProjEmpty(ideal);
-GIMS, OC := ReduceByG(RadicalDecomposition(ideal));
+GIMS, OC := ReduceByA(RadicalDecomposition(ideal));
 "Orbit count then ideals mod symmetry:";
 OC;
 GIMS;
@@ -21,7 +21,7 @@ GIMS;
 // Case b=0 (edge: b,d,f,h)
 ideal := defIdeal + Ideal(b);
 "Case b=0. Empty?"; IsProjEmpty(ideal);
-GIMS, OC := ReduceByG(RadicalDecomposition(ideal));
+GIMS, OC := ReduceByA(RadicalDecomposition(ideal));
 "Orbit count then ideals mod symmetry:";
 OC;
 GIMS;
@@ -30,7 +30,7 @@ GIMS;
 // Case e=0 (centre)
 ideal := defIdeal + Ideal(e);
 "Case e=0. Empty?"; IsProjEmpty(ideal);
-GIMS, OC := ReduceByG(RadicalDecomposition(ideal));
+GIMS, OC := ReduceByA(RadicalDecomposition(ideal));
 "Orbit count then ideals mod symmetry:";
 OC;
 GIMS;

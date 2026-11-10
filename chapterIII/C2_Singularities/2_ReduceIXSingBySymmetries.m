@@ -1,6 +1,6 @@
-// load "Step2/C2_Singularities/2_ReduceIXSingBySymmetries.m";
-// Older script-style version of Step2/lib/ReduceByG.m, hard-wired to Plist from 1a (OrbitCount hard-coded to length 8).
-load "Step2/C2_Singularities/1a_ComputeSingularitiesSchemeWay.m";
+// load "chapterIII/C2_Singularities/2_ReduceIXSingBySymmetries.m";
+// Older script-style version of chapterIII/lib/ReduceByA.m, hard-wired to Plist from 1a (OrbitCount hard-coded to length 8).
+load "chapterIII/C2_Singularities/1a_ComputeSingularitiesSchemeWay.m";
 
 // First write down all symmetries of the quadrics
 // we define a ring homomorphism for (the action of) each symmetry, as described in X Step 2 B.
@@ -10,7 +10,7 @@ rho := hom<S -> S | [c,f,i,b,e,h,a,d,g]>; // rotate cw
 sigma := hom<S -> S | [g,h,i,d,e,f,a,b,c]>; // flip about x-axis
 tauVec := [hom<S -> S | [j eq i select -S.j else S.j : j in [1..9]]> : i in [1..9]];
 
-// action of G on an ideal:
+// action of A on an ideal:
 function ActOnIdeal(phi, J)
     gens := Generators(J);
     new_gens := [S ! phi(f) : f in gens ];

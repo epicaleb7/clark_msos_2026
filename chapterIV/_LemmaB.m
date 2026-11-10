@@ -1,4 +1,4 @@
-// load "Week6/LemmaB.m";
+// load "chapterIV/_LemmaB.m";
 // Lemma B check: Jacobian minors at a point P on exactly one line x_i = 0.
 // Variables x1..x9, plus P1..P9 as symbols for the coordinates of P.
 R<x1,x2,x3,x4,x5,x6,x7,x8,x9,P1,P2,P3,P4,P5,P6,P7,P8,P9> := PolynomialRing(Rationals(), 18);

@@ -1,4 +1,4 @@
-// load "Step2/C1_Degeneracies/QQ zeta24/SetupX_QQalal.m";   (after SetupX.m and SetupX_QQal.m)
+// load "chapterIII/C1_Degeneracies/QQ zeta24/SetupX_QQalal.m";   (after SetupX.m and SetupX_QQal.m)
 // QQalal = QQal(rt3) = QQ(zeta8, sqrt3): QQal with sqrt3 adjoined. Needed for the two-zero points
 // (e.g. g^2 = 3/2 i^2). In the output: zeta_8^2 = i, zeta_8 - zeta_8^3 = sqrt2, rt3 = sqrt3.
 Pxx<xx> := PolynomialRing(QQal);
