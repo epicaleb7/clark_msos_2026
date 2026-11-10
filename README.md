@@ -26,11 +26,13 @@ Particularly in Chapter IV, there are multiple dependent scripts, but all script
 
 ## Layout
 
-- `chapterII/`: ideal of the lines
+- `chapterII/`: ideal of the lines (previously in `chapterIII`)
 - `chapterIII/C2_Singularities/`: Sing(X)
 - `chapterIII/C1_Degeneracies/`: degeneracies, one file per case, over `QQ`, `QQ zeta8` = $\mathbb{Q}(\zeta_8) = \mathbb{Q}(\sqrt 2, i)$ and `QQ zeta24` = $\mathbb{Q}(\zeta_{24}) = \mathbb{Q}(\zeta_8,\sqrt{3})$, with saved output
-- `chapterIII/lib/`: A-orbit reduction helpers
-- `chapterIV/`: group action, characters, decomposition
-- `chapterIV/_LemmaB.m`: Jacobian-minor check for Lemma (number) (local coordinates when P lies in exactly one line)
-- `chapterIV/D4_only`: characters and decomposition for restriction representation of $D_4 \leq A$
-- `chapterIV/D4_only`: characters and decomposition for restriction representation of $G=(C_2^9)_\mathrm{even} \leq A$
+- `chapterIII/lib/`: G-orbit reduction helpers
+- `chapterIV/`: group action, characters, decomposition, and the Jacobian-minor check for Lemma B
+- `chapterIV/_LemmaB.m`: Jacobian-minor check for Lemma B (local coordinates when P lies in exactly one line)
+- `chapterIV/D4_only`: characters and decomposition for restriction representations of $D_4 \leq A$ and $G=(C_2^9)_\mathrm{even} \leq A$
+
+## FYI
+If you're seeing this note, then minimal effort has gone into cleaning the code for readability! Please stand by, as I hope to do that soon after submitting the thesis.
